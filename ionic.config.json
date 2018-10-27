@@ -1,0 +1,7 @@
+{
+  "name": "openWeather",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
