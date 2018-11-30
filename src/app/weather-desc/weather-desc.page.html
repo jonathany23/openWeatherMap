@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start"> 
+        <ion-back-button defaultHref="home"></ion-back-button> 
+    </ion-buttons>
+    <ion-title>{{ weatherDesc.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of weatherDesc.weather">
+      <img slot="start" src="http://openweathermap.org/img/w/{{item.icon}}.png" alt="">
+      <h3>{{item.description}}</h3>
+      <!--<div class="item-note" slot="end">
+        {{item.note}}
+      </div>-->
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+      <ion-label>
+          <h4>Clima</h4>
+        </ion-label>
+      <ion-item>
+        Humedad:
+        <div class="item-note" slot="end">
+            {{weatherDesc.main.humidity}}
+        </div>
+      </ion-item>
+      <ion-item>
+          Presión:
+          <div class="item-note" slot="end">
+              {{weatherDesc.main.pressure}}
+          </div>
+      </ion-item>
+      <ion-item>
+          Temperatura:
+          <div class="item-note" slot="end">
+              {{weatherDesc.main.temp}}
+          </div>
+      </ion-item>
+      <ion-item>
+          Temperatura Máxima:
+          <div class="item-note" slot="end">
+              {{weatherDesc.main.temp_max}}
+          </div>
+      </ion-item>
+      <ion-item>
+          Temperatura Mínima:
+          <div class="item-note" slot="end">
+              {{weatherDesc.main.temp_min}}
+          </div>
+      </ion-item>
+      <ion-label>
+        <h4>Viento</h4>
+      </ion-label>
+      <ion-item>
+          Grados:
+          <div class="item-note" slot="end">
+              {{weatherDesc.wind.deg}}
+          </div>
+      </ion-item>
+      <ion-item>
+          Velocidad:
+          <div class="item-note" slot="end">
+              {{weatherDesc.wind.speed}}
+          </div>
+      </ion-item>
+    </ion-list>
+</ion-content>

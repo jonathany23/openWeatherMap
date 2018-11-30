@@ -14,7 +14,9 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'weatherDesc', loadChildren: './weather-desc/weather-desc.module#WeatherDescPageModule' },
+  { path: 'constants', loadChildren: './constants/api.constants#OPEN_WEATHER_MAP' }
 ];
 
 @NgModule({
